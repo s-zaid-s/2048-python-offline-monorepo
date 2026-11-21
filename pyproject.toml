@@ -1,0 +1,21 @@
+[project]
+name = "game2048-python-offline-monorepo"
+version = "0.1.0"
+description = "World-class offline-only pure-Python 2048 backend & client monorepo"
+requires-python = ">=3.10"
+dependencies = []
+
+[tool.unittest]
+start_dir = "tests"
+top_level_dir = "."
+
+[tool.pytest.ini_options]
+pythonpath = [
+  "packages/game2048_contracts/src",
+  "packages/game2048_domain/src",
+  "packages/game2048_observability/src",
+  "packages/game2048_storage/src",
+  "packages/game2048_app/src",
+  "packages/game2048_client/src",
+]
+testpaths = ["tests"]
